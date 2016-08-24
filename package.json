@@ -1,6 +1,6 @@
 {
   "name": "m-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "m-picker 模拟ios原生select的选择器",
   "main": "index.js",
   "scripts": {
