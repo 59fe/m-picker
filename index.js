@@ -329,11 +329,6 @@ var Picker = function (_Component) {
                 var _activeItem = col.wrapper.querySelector('.active');
                 _activeItem && _activeItem.classList.remove('active');
 
-                if (_this3.props.rotateEffect) {
-                    Array.prototype.forEach.call(col.items, function (itemNode) {
-                        (0, _transition.setTransitionDur)(itemNode, transition);
-                    });
-                }
                 var selectedItem = col.items[activeIndex];
                 selectedItem.classList.add('active');
                 (0, _transition.setTransform)(selectedItem, '');
@@ -612,14 +607,19 @@ var Picker = function (_Component) {
             var defaultValue = _props3.defaultValue;
             var className = _props3.className;
 
-            var others = _objectWithoutProperties(_props3, ['onChange', 'cols', 'readOnly', 'value', 'defaultValue', 'className']);
+            var others = _objectWithoutProperties(_props3, ['onChange', 'cols', 'readOnly', 'value', 'defaultValue', 'className', 'updateValuesOnMomentum', 'updateValuesOnTouchmove', 'onOpen', 'onClose', 'toolbar', 'toolbarTitle', 'showSubmitBtn', 'showClearBtn', 'momentumRatio', 'freeMode']);
 
             var clazz = (0, _classnames2.default)('picker-input', className);
 
-            others.__extraDOM = this.renderMask();
-            others.onClick = _util2.default.createChainedFunction(this.handleInputClick, others.onClick);
+            var __extraDOM = this.renderMask();
+            others.onTouchStart = _util2.default.createChainedFunction(this.handleInputClick, others.onClick);
 
-            return _react2.default.createElement('input', _extends({ ref: 'inputRef', className: clazz, readOnly: true, value: this.state.inputValue }, others));
+            return _react2.default.createElement(
+                'div',
+                { },
+                __extraDOM || null,
+                _react2.default.createElement('input', _extends({ ref: 'inputRef', className: clazz, readOnly: true, value: this.state.inputValue }, others))
+            )
         }
     }], [{
         key: 'handleItemClick',
@@ -653,7 +653,6 @@ Picker.propTypes = {
 
     updateValuesOnMomentum: _react.PropTypes.bool,
     updateValuesOnTouchmove: _react.PropTypes.bool,
-    rotateEffect: _react.PropTypes.bool,
     momentumRatio: _react.PropTypes.number,
     freeMode: _react.PropTypes.bool
 };
@@ -669,8 +668,7 @@ Picker.defaultProps = {
 
     updateValuesOnMomentum: false,
     updateValuesOnTouchmove: true,
-    rotateEffect: false,
-    momentumRatio: 7,
+    momentumRatio: 5,
     freeMode: false
 };
 
