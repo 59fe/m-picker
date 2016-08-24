@@ -1,0 +1,43 @@
+{
+  "name": "m-picker",
+  "version": "1.0.0",
+  "description": "m-picker 模拟ios原生select的选择器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/59fe/m-picker.git"
+  },
+  "homepage": "https://github.com/59fe/m-picker",
+  "author": {
+    "name": "半边",
+    "email": "itaofe@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "半边",
+      "email": "itaofe@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/59fe/m-picker/issues"
+  },
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "react": "~15.2.0",
+    "react-dom": "~15.2.0",
+    "m-base": "^1.0.0",
+    "m-mask": "^1.0.0",
+    "m-input": "^1.0.0",
+    "classnames": "~2.2.3"
+  },
+  "keywords": [
+    "picker",
+    "react",
+    "mobile"
+  ],
+  "license": "Apache-2.0"
+}
+  
