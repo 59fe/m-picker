@@ -600,11 +600,6 @@ var Picker = function (_Component) {
         key: 'render',
         value: function render() {
             var _props3 = this.props;
-            var onChange = _props3.onChange;
-            var cols = _props3.cols;
-            var readOnly = _props3.readOnly;
-            var value = _props3.value;
-            var defaultValue = _props3.defaultValue;
             var className = _props3.className;
 
             var clazz = (0, _classnames2.default)('picker-input', className);
