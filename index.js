@@ -607,18 +607,19 @@ var Picker = function (_Component) {
             var defaultValue = _props3.defaultValue;
             var className = _props3.className;
 
-            var others = _objectWithoutProperties(_props3, ['onChange', 'cols', 'readOnly', 'value', 'defaultValue', 'className', 'updateValuesOnMomentum', 'updateValuesOnTouchmove', 'onOpen', 'onClose', 'toolbar', 'toolbarTitle', 'showSubmitBtn', 'showClearBtn', 'momentumRatio', 'freeMode']);
-
             var clazz = (0, _classnames2.default)('picker-input', className);
 
             var __extraDOM = this.renderMask();
-            others.onTouchStart = _util2.default.createChainedFunction(this.handleInputClick, others.onClick);
+            var others = {
+              onTouchStart : _util2.default.createChainedFunction(this.handleInputClick, _props3.onClick),
+              placeholder : _props3.placeholder
+            }
 
             return _react2.default.createElement(
                 'div',
                 { },
                 __extraDOM || null,
-                _react2.default.createElement('input', _extends({ ref: 'inputRef', className: clazz, readOnly: true, value: this.state.inputValue }, others))
+                _react2.default.createElement('input', _extends({ ref: 'inputRef', className: clazz, readOnly: true, type: 'text', value: this.state.inputValue}, others))
             )
         }
     }], [{
