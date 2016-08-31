@@ -664,7 +664,7 @@ Picker.defaultProps = {
 
     updateValuesOnMomentum: false,
     updateValuesOnTouchmove: true,
-    momentumRatio: 5,
+    momentumRatio: 7,
     freeMode: false
 };
 
