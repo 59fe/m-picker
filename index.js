@@ -17,6 +17,10 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _PropTypes = require('prop-types');
+
+var _PropTypes2 = _interopRequireDefault(_PropTypes);
+
 var _maskM = require('m-mask');
 
 var _maskM2 = _interopRequireDefault(_maskM);
@@ -630,27 +634,27 @@ var Picker = function (_Component) {
 }(_react.Component);
 
 Picker.propTypes = {
-    onOpen: _react.PropTypes.func,
-    onClose: _react.PropTypes.func,
-    defaultValue: _react.PropTypes.array,
+    onOpen:         _PropTypes2.default.PropTypes.func,
+    onClose:        _PropTypes2.default.PropTypes.func,
+    defaultValue:   _PropTypes2.default.PropTypes.array,
 
-    toolbar: _react.PropTypes.bool, // 是否显示toolbar
-    toolbarTitle: _react.PropTypes.node,
-    showSubmitBtn: _react.PropTypes.bool,
-    showClearBtn: _react.PropTypes.bool,
+    toolbar:        _PropTypes2.default.PropTypes.bool, // 是否显示toolbar
+    toolbarTitle:   _PropTypes2.default.PropTypes.node,
+    showSubmitBtn:  _PropTypes2.default.PropTypes.bool,
+    showClearBtn:   _PropTypes2.default.PropTypes.bool,
 
-    cols: _react.PropTypes.arrayOf(_react.PropTypes.shape({
-        className: _react.PropTypes.string, // 用于给某个col加上特定的样式
-        textAlign: _react.PropTypes.oneOf(['left', 'right', 'center']),
-        values: _react.PropTypes.array,
-        displayValues: _react.PropTypes.array
+    cols: _PropTypes2.default.arrayOf(_PropTypes2.default.shape({
+        className:     _PropTypes2.default.string, // 用于给某个col加上特定的样式
+        textAlign:     _PropTypes2.default.oneOf(['left', 'right', 'center']),
+        values:        _PropTypes2.default.array,
+        displayValues: _PropTypes2.default.array
     })).isRequired,
-    formatValue: _react.PropTypes.func, // (this, value, displayValue)
 
-    updateValuesOnMomentum: _react.PropTypes.bool,
-    updateValuesOnTouchmove: _react.PropTypes.bool,
-    momentumRatio: _react.PropTypes.number,
-    freeMode: _react.PropTypes.bool
+    formatValue:             _PropTypes2.default.func, // (this, value, displayValue)
+    updateValuesOnMomentum:  _PropTypes2.default.bool,
+    updateValuesOnTouchmove: _PropTypes2.default.bool,
+    momentumRatio:           _PropTypes2.default.number,
+    freeMode:                _PropTypes2.default.bool
 };
 
 Picker.defaultProps = {

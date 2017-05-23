@@ -1,6 +1,6 @@
 {
   "name": "m-picker",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "m-picker 模拟ios原生select的选择器",
   "main": "index.js",
   "scripts": {
@@ -26,11 +26,12 @@
   },
   "readmeFilename": "README.md",
   "dependencies": {
-    "react": "~15.2.0",
-    "react-dom": "~15.2.0",
+    "react": "~15.5.4",
+    "react-dom": "~15.5.4",
+    "prop-types": "^15.5.8",
     "m-base": "^1.0.0",
-    "m-mask": "^1.0.0",
-    "m-input": "^1.0.0",
+    "m-mask": "^1.1.0",
+    "m-input": "^1.1.0",
     "classnames": "~2.2.3"
   },
   "keywords": [
